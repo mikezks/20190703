@@ -21,7 +21,20 @@
             name="to"
             class="form-control">
       </div>
-  
+
+      <div class="form-group">
+        <label>
+          <input
+            #delayed
+            type="checkbox"
+            name="delayed"checked="true"
+            (change)="true">
+          delayed
+        </label>
+        <br>
+        <pre>delayed: {{ delayed.checked }}</pre>
+      </div>
+
       <div class="form-group">
         <button
             (click)="search()"

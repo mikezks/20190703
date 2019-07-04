@@ -23,7 +23,7 @@ import { CityPipe } from './shared/pipes/city.pipe';
       FlightSearchComponent,
       CityPipe
    ],
-   providers: [ FlightService ],
+   providers: [ /* FlightService */ ],
    bootstrap: [
       AppComponent
    ]

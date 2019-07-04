@@ -3,9 +3,9 @@ import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Flight } from '../entities/flight';
 
-@Injectable(/* {
+@Injectable({
   providedIn: 'root'
-} */)
+})
 export class FlightService {
 
   constructor(private http: HttpClient) { }
