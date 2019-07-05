@@ -11,16 +11,23 @@
         <li>
             <a>
                 <i class="ti-home"></i>
-                <p>Home</p>
+                <p><a [routerLink]="['/home']">Home</a></p>
             </a>
         </li>
 
         <li>
             <a>
                 <i class="ti-arrow-top-right"></i>
-                <p>Flights</p>
+                <p><a [routerLink]="['/flight-booking/flight-search']">Flights Search</a></p>
             </a>
         </li>
+
+        <li>
+                <a>
+                    <i class="ti-arrow-top-right"></i>
+                    <p><a [routerLink]="['/flight-booking/flight-edit']">Flights Edit</a></p>
+                </a>
+            </li>
 
         <li>
             <a routerLink="/flight-booking/passenger-search">

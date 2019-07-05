@@ -7,18 +7,22 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { FlightBookingModule } from './flight-booking/flight-booking.module';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
    imports: [
       BrowserModule,
       HttpClientModule,
       FlightBookingModule,
+      AppRoutingModule,
       SharedModule,
    ],
    declarations: [
       AppComponent,
       SidebarComponent,
-      NavbarComponent
+      NavbarComponent,
+      HomeComponent
    ],
    providers: [ /* FlightService */ ],
    bootstrap: [
