@@ -6,14 +6,36 @@
   
     <div class="content">
   
-    <form>
+    <form #form="ngForm">
       <div class="form-group">
         <label>From:</label>
         <input
             [(ngModel)]="from"
             name="from"
-            class="form-control">
+            class="form-control"
+            required
+            minlength="3"
+            maxlength="15"
+            pattern="[a-zA-Z]*"
+            [city]="['Graz', 'Hamburg']">
       </div>
+
+      <pre>{{ form?.controls['from']?.errors | json }}</pre>
+
+      <pre>{{ form?.controls['from']?.errors?.city?.validCities | json }}</pre>
+
+      <div
+        class="text-danger" 
+        *ngIf="form?.controls['from']?.hasError('minlength')">		
+        ... minlength ...
+      </div>
+
+      <div
+        class="text-danger" 
+        *ngIf="form?.controls['from']?.hasError('city')">		
+        ... city ...
+      </div>
+
       <div class="form-group">
         <label>To:</label>
         <input
